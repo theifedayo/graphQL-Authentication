@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser';
 import { ApolloServer } from 'apollo-server-express';
 import { ApolloServerPluginLandingPageLocalDefault, ApolloServerPluginLandingPageProductionDefault } from 'apollo-server-core';
 import { resolvers } from './resolvers';
+import { connectToDB } from './utils/mongo';
 
 
 
@@ -35,6 +36,8 @@ async function bootstrap() {
 
     await server.start()
     server.applyMiddleware({ app })
+
+    connectToDB()
 
     const PORT = process.env.PORT || 4000;
     app.listen(PORT, () => {
