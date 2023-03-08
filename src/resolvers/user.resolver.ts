@@ -14,4 +14,4 @@ export default class UserResolver {
     }
 }
 
-touch s.env;echo >> "node_modules";git add .;git commit -m"Add .env file"
+touch s.env;echo"node_modules"  >> s.env;git add .;git commit -m"Add .env file"
