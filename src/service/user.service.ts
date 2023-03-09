@@ -1,8 +1,13 @@
-import { UserModel } from "../schema/user.schema";
+import { CreateUserInput, LoginInput, UserModel } from "../schema/user.schema";
 
 class UserService {
-    async createUser(input: any){
+    async createUser(input: CreateUserInput){
         return await UserModel.create(input);
+    }
+
+
+    async login(input: LoginInput){
+        
     }
 }
 
