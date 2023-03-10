@@ -25,7 +25,7 @@ export class Story {
     body: string
 
     @Field(()=>String)
-    @prop({required: true, default: () => `stroy_${nanoid()}, unique: true}`})
+    @prop({required: true, default: () => `story_${nanoid()}, unique: true}`})
     storyId: string
 }
 
